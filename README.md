@@ -62,17 +62,18 @@ If you’re using an MCP client (e.g., Claude Desktop), add this to your `claude
 
 ```json
 {
-    mcpServers: {
-        "sumits-calendar-data": {
-            command: "node",
-            args: ["/full/path/to/project/server.js"],
-            env: {
-                GOOGLE_API_KEY: "...",
-                CALENDAR_ID: "...",
-            },
-        },
-    },
+  "mcpServers": {
+    "sumits-calendar-data": {
+      "command": "node",
+      "args": ["/full/path/to/project/index.js"],
+      "env": {
+        "GOOGLE_PUBLIC_API_KEY": "your_api_key_here",
+        "CALENDAR_ID": "your_calendar_id_here"
+      }
+    }
+  }
 }
+
 ```
 
 Then call the tool:
